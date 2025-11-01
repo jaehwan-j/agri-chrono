@@ -86,8 +86,9 @@ def main():
     base_path = os.path.expanduser(args.output)
     os.makedirs(base_path, exist_ok=True)
 
-    rec_L = ZEDSVORecorder(serial_number=[Serial_number], name="L", base_path=base_path, sync_time=args.sync_time)
-    rec_R = ZEDSVORecorder(serial_number=[Serial_number], name="R", base_path=base_path, sync_time=args.sync_time)
+    # Please input the Serial Number as an integer (whole number)
+    rec_L = ZEDSVORecorder(serial_number=Serial_number, name="L", base_path=base_path, sync_time=args.sync_time)
+    rec_R = ZEDSVORecorder(serial_number=Serial_number, name="R", base_path=base_path, sync_time=args.sync_time)
 
     rec_L.start()
     rec_R.start()

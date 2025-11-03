@@ -19,7 +19,6 @@ Each module is self-contained and ships with an **`.sh` auto-installer** for one
 - **JetPack 6.2 (L4T 36.4.3)** with **ROS 2 Humble**  
 - **ZED**: [ZED Link Duo v1.3.0](https://www.stereolabs.com/docs/embedded/zed-link/install-the-drivers) + [ZED SDK v5.0.2](https://www.stereolabs.com/developers/release)  
 - **Livox**: SDK2 (latest) with custom `recorder_sync.cpp` for synchronized logging  
-  - **Required Network Configuration**: The `eno1` interface's static IP must be set to `192.168.1.50`.
 - **Kernel module**: `gs_usb` (externally built for L4T 36.4.3)  
 
 </td>

@@ -229,26 +229,35 @@ Public release of RGB-D, LiDAR, and IMU recordings collected in real-world condi
 │   │   ├── 00000.ply             
 │   ├── lidar_info.csv            ← Per-frame timestamp and IMU data from LiDAR
 ├── zed_info.csv                  ← Per-frame timestamp and IMU data from ZED L and R
+├── pose_info.csv                 ← Per-frame timestamp and VIO Pose from ZED L and R
 ```
 
 ### CSV Format
 
 #### `zed_info.csv`
 
-| Column                     | Description                                         |
-|----------------------------|-----------------------------------------------------|
-| `L_frame_id`, `R_frame_id` | Matched frame IDs from left/right ZED              |
-| `L_timestamp`, `R_timestamp` | Absolute timestamps (in seconds)                 |
-| `relative_time`           | Time elapsed from the first ZED frame (starts at 0.0) |
-| `L_*`, `R_*`              | IMU data from each ZED (accel_x/y/z, gyro_x/y/z)    |
+| Column                       | Description                                           |
+|------------------------------|-------------------------------------------------------|
+| `L_frame_id`, `R_frame_id`   | Matched frame IDs from left/right ZED                 |
+| `L_timestamp`, `R_timestamp` | Absolute timestamps (in seconds)                      |
+| `relative_time`              | Time elapsed from the first ZED frame (starts at 0.0) |
+| `L_*`, `R_*`                 | IMU data from each ZED (accel_x/y/z, gyro_x/y/z)      |
+
+#### `pose_info.csv`
+
+| Column                       | Description                                               |
+|------------------------------|-----------------------------------------------------------|
+| `L_frame_id`, `R_frame_id`   | Matched frame IDs from left/right ZED                     |
+| `L_timestamp`, `R_timestamp` | Absolute timestamps (in seconds)                          |
+| `L_*`, `R_*`                 | VIO Pose data from each ZED (trans_x/y/z, orien_x/y/z/w)  |
 
 #### `lidar_info.csv`
 
-| Column          | Description                                      |
-|------------------|--------------------------------------------------|
-| `frame_id`      | Frame index aligned with ZED relative time        |
-| `timestamp`     | Relative timestamp (ZED-aligned)                  |
-| `accel_*`, `gyro_*` | IMU data from LiDAR at the corresponding time |
+| Column              | Description                                      |
+|---------------------|--------------------------------------------------|
+| `frame_id`          | Frame index aligned with ZED relative time       |
+| `timestamp`         | Absolute timestamps (in seconds)                 |
+| `accel_*`, `gyro_*` | IMU data from LiDAR at the corresponding time    |
 
 ---
 

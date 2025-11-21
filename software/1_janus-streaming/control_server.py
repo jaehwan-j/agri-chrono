@@ -192,7 +192,7 @@ def handle_start_recording(filename):
         return
 
     print(f"📥 Start recording: {filename}")
-    base_path = os.path.expanduser(f"~/AgriChrono/data/fargo/{filename}")
+    base_path = os.path.expanduser(f"~/AgriChrono/data/{filename}")
     timestamp_dir = datetime.now().strftime("%Y%m%d_%H%M")
     full_path = os.path.join(base_path, timestamp_dir)
     # full_path = f"{base_path}_{timestamp_dir}"

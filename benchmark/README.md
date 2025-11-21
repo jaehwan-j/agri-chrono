@@ -2,86 +2,56 @@
 
 
 ## 1. What is this Benchmark?
-We provide a **benchmark built on the AgriChrono dataset** to test **Gaussian Splatting methods** in real-world field conditions.  
-Unlike indoor datasets, AgriChrono includes **strong lighting changes** and **temporal crop growth**, making it a realistic stress test.
+We benchmark Novel View Synthesis on AgriChrono across **Seven Scenarios** characterized by **Lighting Variance** and **Growth Span**. Each scenario comprises 400 images (960×540) partitioned into 350 for training and 50 for testing. This benchmark assesses the robustness of methods against drastic **illumination changes** and **morphological variations** of **non-rigid objects** in unstructured outdoor environments.
 
 ---
 
-## 2. Benchmark Settings
+## 2. Data Preparation & Evaluation Protocol 
 
-<table>
-<tr>
-<td width="60%" valign="top">
+<p align="center">
+  <img src="../assets/Figure_10.png" alt="Benchmark Colmap" style="width:100%;"/>
+</p>
 
-📂 **[Download Benchmark Dataset](https://ucla.box.com/s/xemhedod23tnimcvkou6kbupay3kpue1)**  
+### 📂 **[Download Benchmark Dataset](https://ucla.box.com/s/xemhedod23tnimcvkou6kbupay3kpue1)**  
 
-We constructed the benchmark using **60-second monocular RGB sequences** (900 frames at 15 FPS, resized to 512×288).  
-Each sequence is divided into **10 batches** of 90 frames, from which training sets are sampled at different frame rates:  
-- 15 FPS → 90 images  
-- 10 FPS → 60 images  
-- 5 FPS → 30 images  
-- 3 FPS → 18 images  
+### Dataset Overview
 
-Evaluation is performed on both **training views (15 FPS)** and **novel views (10, 5, 3 FPS)**, with all camera poses estimated using **[VGGT](https://github.com/facebookresearch/vggt)**(CVPR 25 Best paper) for robustness in dynamic crop scenes.  
+- **Coverage**: Covers the entirety of Site 1 across 7 scenarios.
+- **Sampling**: Each scenario consists of a batch of 400 frames.
+- **Interval**: Curated by sampling every 7 frames, resulting in a uniform spatial interval of ∼9 cm
 
-Two benchmark scenarios are considered:  
-- **☀️ Lighting Variance**: Captures at 06:00, 11:00, 16:00, and 21:00  
-- **🌱 Growth Span**: Captures at 06:00 on Day 6, 13, and 20  
+### Data Structure (COLMAP Format)
 
+- **RGB Images**: Resized to 960 × 540 resolution.
+- **Camera Intrinsics**: Corresponding intrinsic camera parameters included.
+- **3D Point Cloud**: Sparse 3D point cloud (sampled at 0.1% from Depth).
+- **Camera Extrinsics**: Extrinsic camera pose derived from VIO.
 
-</td>
-<td width="40%" valign="top">
+### Experimental Setup (Novel View Synthesis)
 
-<img src="../assets/Figure_6.png" alt="Benchmark Protocol" width="100%"/>
-
-<br/><br/>
-
-| Setting | Train FPS | Render FPS | View Type      |
-|---------|-----------|------------|----------------|
-| 1       | 15        | 15         | Training Views |
-| 2       | 10        | 5          | Novel Views    |
-| 3       | 5         | 10         | Novel Views    |
-| 4       | 3         | 12         | Novel Views    |
-
-</td>
-</tr>
-</table>
+- **Data Split**:
+  - **Training**: 350 images
+  - **Testing**: 50 images
+- **Evaluation Metrics**: PSNR, SSIM
 
 ---
 
 ## 3. Benchmark Results
 
+> **Note**: These results can be viewed more conveniently on the [**Project Page**](https://jaehwan-j.github.io/agrichrono/).
+
 ### 🔹 Quantitative Results
 
 <p align="center">
-  <img src="../assets/Table_3.png" alt="Benchmark Summary" style="width:100%;"/>
+  <img src="../assets/Benchmark_table.png" alt="Benchmark Summary" style="width:100%;"/>
 </p>
-
-We evaluated four baselines on **PSNR** and **SSIM**:
-- **[3D-SSS](https://github.com/realcrane/3D-student-splatting-and-scooping?tab=readme-ov-file)**(CVPR 25 Oral) **[3D-HGS](https://github.com/lihaolin88/3DHGS)**(CVPR 25), **[3D-MCMC](https://github.com/ubc-vision/3dgs-mcmc)**(NeurIPS 24 Spotlight), **[3DGS](https://github.com/graphdeco-inria/gaussian-splatting)**(SIGGRAPH 2023)
-
-**Key takeaways**:
-- Training views: PSNR in the low 30s (much lower than typical indoor benchmarks)  
-- Novel views: further drops under lighting and growth variations  
-- Visual results: blur and crop-structure breakages in challenging conditions  
 
 ### 🔹 Qualitative Results
-- **3D-MCMC** generally achieved **higher scores** than other methods on novel-view evaluation (Settings 2–4).  
-- Rendered images look close to ground truth at a glance, but:  
-  - **Red arrows** → blurred crop structures (visible even in training views)  
-  - **Yellow arrows** → structural breakages, stronger in novel views  
 
 <p align="center">
-  <img src="../assets/Figure_7.png" alt="Qualitative Results" width="100%"/>
+  <img src="../assets/Benchmark_figure.png" alt="Qualitative Results" width="100%"/>
 </p>
 
----
-
-## 4. Why it Matters
-This benchmark provides:
-- A **realistic baseline** for outdoor 3DGS  
-- A **common testbed** for comparing Gaussian Splatting methods  
-- Insights into the **gap between controlled benchmarks and real deployment**
 
 ---
 

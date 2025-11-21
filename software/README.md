@@ -104,7 +104,7 @@ AgriChrono/
 │   ├── create_sendip_service.sh
 │   └── send_ip_email.py
 └── data/
-    └── fargo/ (site1-1, site1-2, site2, site3, ...)
+    └── (site1-1, site1-2, site2, site3, ...)
 ```
 
 ---

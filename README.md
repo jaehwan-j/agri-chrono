@@ -16,8 +16,14 @@
   <a href="https://arxiv.org/pdf/2508.18694">
     <img src="https://img.shields.io/badge/arXiv-2508.18694-red?logo=arxiv" alt="arXiv Badge">
   </a>
-    <a href="datasets/README.md">
-   <img src="https://img.shields.io/badge/Dataset-18%20TB-informational">
+  <a href="https://jaehwan-j.github.io/agrichrono/">
+    <img src="https://img.shields.io/badge/Project-Page-blue?logo=website" alt="Project Page">
+  </a>
+  <a href="benchmark/README.md">
+    <img src="https://img.shields.io/badge/Benchmark-NVS-yellow">
+  </a>
+  <a href="datasets/README.md">
+    <img src="https://img.shields.io/badge/Dataset-18%20TB-green">
   </a>
 </div>
 
@@ -28,7 +34,7 @@
 
 - **Duration**: July 2 – August 1, 2025  
 - **Location**: NDSU Experimental Field, Fargo, ND
-- **Objective**: Capture time-aligned RGB-D, LiDAR, and IMU data across three crop sites under realistic outdoor conditions
+- **Objective**: Capture time-aligned RGB-D, LiDAR, IMU, and Pose data across three crop sites under realistic outdoor conditions
 - **Focus Sites**: 
   - **Site 1**: Primary canola site, with repeated daily captures across growth stages and lighting variations
   - **Site 2**: Canola genotype trial with 44 varieties for morphological diversity
@@ -44,10 +50,10 @@
 </table>
 
 <td width="100%">
-  <div style="display: flex; flex-direction: row; gap: 4px;">
-    <img src="./assets/AgriChrono_Video.gif" alt="GIF 1" width="37.99%"/>
-    <img src="./assets/AgriChrono_Streaming.gif" alt="GIF 2" width="36.23%"/>
-    <img src="./assets/AgriChrono_Data.gif" alt="GIF 3" width="24.75%"/>
+  <div style="display: flex; flex-direction: row; gap: 3px;">
+    <img src="./assets/AgriChrono_Video.gif" alt="GIF 1" width="37.98%"/>
+    <img src="./assets/AgriChrono_Streaming.gif" alt="GIF 2" width="36.22%"/>
+    <img src="./assets/AgriChrono_Data.gif" alt="GIF 3" width="24.74%"/>
   </div>
 </td>
 
@@ -65,11 +71,11 @@ Robot platform, sensor layout, power system, and networking design for long-term
 💻 [**Software Stack**](software/README.md)  
 Control interfaces, real-time streaming modules, and logging mechanisms used during collection  
 
-📊 [**Benchmark**](benchmark/README.md)  
-Protocols for evaluating Gaussian Splatting under lighting and growth variations  
+📊 [**NVS Benchmark**](benchmark/README.md)  
+Novel View Synthesis benchmark on AgriChrono across seven scenarios featuring lighting variance and growth span.
 
 💾 [**AgriChrono Dataset**](datasets/README.md)  
-Public release of RGB-D, LiDAR, and IMU recordings collected in real-world conditions  
+Public release of RGB-D, LiDAR, IMU, and Pose recordings collected in real-world conditions  
 
 </td>
 <td width="40%">

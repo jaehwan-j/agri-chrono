@@ -27,10 +27,7 @@ Each synchronized multi-modal sample contains:
 
 ## 2. Available Downloads
 
-- 🌱 [**Samples (512×288)**](https://ucla.box.com/s/00eyzqj6btzlpmsufbg8wmgkz23813r9)  
-  Downsampled subset for quick testing and reproducibility.  
-
-- 🌱 [**Samples (1920×1080)**](https://ucla.box.com/s/jo0glrpvt9u6ytioleek12dc1wo74ma2)  
+- 🌱 [**Samples**](https://ucla.box.com/s/jo0glrpvt9u6ytioleek12dc1wo74ma2)  
   Original-resolution subset for high-quality experiments.  
 
 - 🖼️ [**Only RGB (Stereo)**](https://ucla.box.com/s/t77te4x3s8nkqale9k8nixe6q9nxo2ii)  
@@ -41,25 +38,27 @@ Each synchronized multi-modal sample contains:
 - 🌾 [**Full AgriChrono Dataset (18TB)**](https://ucla.box.com/s/22nonjreia1m16gw9mbjup6f538y4fvo)  
   Complete release including **RGB-D, LiDAR, and IMU recordings** across all sites, times of day, and growth stages.  
 
+- 📊 [**Benchmark Dataset**](../benchmark/README.md)  
+  Novel View Synthesis benchmark on AgriChrono across seven scenarios featuring lighting variance and growth span.
 ---
 
 ## 3. Sample Contents
 
-Both **512×288** and **1920×1080** sample sets include three benchmarking subsets:
+> **Note**: The sample data is organized as follows. Of these, 400 samples from the Growth Span and Lighting Variance subsets were utilized for the benchmark.
 
 1. **Field Diversity**  
    - Sites: Site 1 (*Clockwise / Counter-Clockwise*), Site 2, Site 3
    - Captures: July 21, 4 PM  
-   - Files: `*_RGB.mp4`, `*_Depth.mp4`, `*_Lidar.mp4`, plus `.tar.gz` archives  
+   - Files: `[Site]_RGB.mp4`, `[Site]_Depth.mp4`, `[Site]_Lidar.mp4`, plus `.tar.gz` archives  
 
 2. **Growth Span**  
    - Weeks: Day 6, Day 13, Day 20 (captured at 6 AM)  
-   - Files: `week_*_RGB.mp4`, `week_*_Depth.mp4`, `week_*_Lidar.mp4`, plus `.tar.gz` archives  
+   - Files: `[Week]_RGB.mp4`, `[Week]_Depth.mp4`, `[Week]_Lidar.mp4`, plus `.tar.gz` archives  
 
 3. **Lighting Variance**  
    - Times: **06:00, 11:00, 16:00, 21:00**  
    - Captures: July 19, Site 1 (CCW direction)  
-   - Files: `time_RGB.mp4`, `time_Depth.mp4`, `time_Lidar.mp4`, plus `.tar.gz` archives  
+   - Files: `[Time]_RGB.mp4`, `[Time]_Depth.mp4`, `[Time]_Lidar.mp4`, plus `.tar.gz` archives  
    
 ---
 

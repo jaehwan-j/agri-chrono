@@ -62,7 +62,5 @@ We benchmark Novel View Synthesis on AgriChrono across **Seven Scenarios** chara
   author={Jeong, Jaehwan and Vu, Tuan-Anh and Jony, Mohammad and Ahmad, Shahab and Rahman, Md. Mukhlesur and Kim, Sangpil and Jawed, M. Khalid},
   journal={arXiv preprint arXiv:2508.18694},
   year={2025},
-  primaryClass={cs.RO},
-  doi={10.48550/arXiv.2508.18694},
 }
 ```

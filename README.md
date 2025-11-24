@@ -42,20 +42,23 @@
 
 </td>
 <td width="40%">
-
 <img src="./assets/Figure_1.png" alt="Overview Image" width="100%"/>
-
 </td>
 </tr>
 </table>
-
-<td width="100%">
-  <div style="display: flex; flex-direction: row; gap: 3px;">
-    <img src="./assets/AgriChrono_Video.gif" alt="GIF 1" width="37.98%"/>
-    <img src="./assets/AgriChrono_Streaming.gif" alt="GIF 2" width="36.22%"/>
-    <img src="./assets/AgriChrono_Data.gif" alt="GIF 3" width="24.74%"/>
-  </div>
-</td>
+<table width="100%">
+  <tr>
+    <td width="37.8%">
+      <img src="./assets/AgriChrono_Video.gif" width="100%">
+    </td>
+    <td width="36%">
+      <img src="./assets/AgriChrono_Streaming.gif" width="100%">
+    </td>
+    <td width="25.6%">
+       <img src="./assets/AgriChrono_Data.gif" width="100%">
+    </td>
+  </tr>
+</table>
 
 ---
 

@@ -13,7 +13,7 @@
 
 
 <div align="center">
-  <a href="https://arxiv.org/pdf/2508.18694">
+  <a href="https://arxiv.org/pdf/2508.18694v2">
     <img src="https://img.shields.io/badge/arXiv-2508.18694-red?logo=arxiv" alt="arXiv Badge">
   </a>
   <a href="https://jaehwan-j.github.io/agrichrono/">

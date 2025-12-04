@@ -36,7 +36,8 @@ Each synchronized multi-modal sample contains:
   - Contains **only stereo RGB images**, without depth or LiDAR  
 
 - 🌾 [**Full AgriChrono Dataset (18TB)**](https://ucla.box.com/s/22nonjreia1m16gw9mbjup6f538y4fvo)  
-  Complete release including **RGB-D, LiDAR, and IMU recordings** across all sites, times of day, and growth stages.  
+  > **Note**: `Site1` will be updated within Jan, 2026.
+
 
 - 📊 [**Benchmark Dataset**](../benchmark/README.md)  
   Novel View Synthesis benchmark on AgriChrono across seven scenarios featuring lighting variance and growth span.
